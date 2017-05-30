@@ -1,3 +1,27 @@
-<body>
-  <h1><%= title %></h1>
-    <p>Welcome back to Admin <%= title %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+   <% include partials/head.ejs %>
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+      <h1><%= title %></h1>
+      <p>Welcome back to Admin <%= title %></p>
+
+      <form action="/Questionnaire" method="post">
+        	<!-- req.body.ingredient_name -->
+    	    <input type="text" name="questionnaire_name">
+    	    <input type="submit">
+        </form>
+
+        <ul>
+    	    <% questionnaires.forEach(questionnaire => { %>
+    		    <li>
+              <%= questionnaire.name %>
+              <a href="/questionnaires/<%= questionnaire._id %>/edit">Edit</a>
+          　　<a href="/questionnaires/<%= questionnaire._id %>/delete">Delete</a>
+            </li>
+    	    <% }) %>
+        </ul>
+  </body>
+</html>
