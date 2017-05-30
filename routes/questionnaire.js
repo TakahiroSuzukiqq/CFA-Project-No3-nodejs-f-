@@ -1,10 +1,9 @@
 var express = require('express');
-
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Dashboard for ICN' });
+  res.render('questionnaire', { title: 'Questionnaire' });
 });
 
 module.exports = router;
