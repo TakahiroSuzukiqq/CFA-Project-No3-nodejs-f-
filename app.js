@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-// database is called cfa-pj3-questionnaire
+// database is called cfa-pj3-icn
 mongoose.connect(process.env.MONGODB_URI);
 const { connection: db } = mongoose;
 
