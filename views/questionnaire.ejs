@@ -6,7 +6,8 @@
   <body>
     <% include partials/header.ejs %>
       <h1><%= title %></h1>
-      <p>Welcome back to Admin <%= title %></p>
+      <br>
+      <h2>Create Questions!!</h2>
 
       <form action="/questionnaire" method="post">
         	<!-- req.body.ingredient_name -->
@@ -14,6 +15,7 @@
     	    <input type="submit">
         </form>
 
+<br>
         <ul>
     	    <% questionnaires.forEach(questionnaire => { %>
     		    <li>
