@@ -6,7 +6,7 @@ const Questionnaire = require('../models/Questionnaire');
 exports.getQuestionnaires = (req, res) => {
 	Questionnaire.find()
 		.then((questionnaires) => {
-			res.render('Questionnaire', {
+			res.render('questionnaire', {
 				title: 'Questionnaires',
 				questionnaires: questionnaires
 			})
