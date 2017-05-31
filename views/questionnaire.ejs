@@ -8,7 +8,7 @@
       <h1><%= title %></h1>
       <p>Welcome back to Admin <%= title %></p>
 
-      <form action="/Questionnaire" method="post">
+      <form action="/questionnaire" method="post">
         	<!-- req.body.ingredient_name -->
     	    <input type="text" name="questionnaire_name">
     	    <input type="submit">
@@ -18,8 +18,8 @@
     	    <% questionnaires.forEach(questionnaire => { %>
     		    <li>
               <%= questionnaire.name %>
-              <a href="/questionnaires/<%= questionnaire._id %>/edit">Edit</a>
-          　　<a href="/questionnaires/<%= questionnaire._id %>/delete">Delete</a>
+              <a href="/questionnaire/<%= questionnaire._id %>/edit">Edit</a>
+          　　<a href="/questionnaire/<%= questionnaire._id %>/delete">Delete</a>
             </li>
     	    <% }) %>
         </ul>
