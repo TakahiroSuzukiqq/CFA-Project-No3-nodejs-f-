@@ -52,3 +52,37 @@ exports.getDeleteQuestionnaires = (req, res) => {
 			res.redirect('/questionnaire')
 		});
 };
+
+//##################################################################
+
+// ####Get Questionnaires Api####
+exports.getQuestionnairesApi = (req, res) => {
+	Questionnaire.find()
+		.then(questionnaires => {
+			res.json(questionnaires)
+		})
+};
+// ####Get New Questionnaires Api####
+exports.getNewQuestionnairesApi = (req, res) => {
+	const name = req.query.name;
+	let questionnaire = new Questionnaire();
+	questionnaire.name = name;
+	questionnaire.save()
+		.then(() => {
+			res.redirect('/api/questionnaire')
+		})
+};
+// ####Edit Questionnaires Api####
+exports.getEditQuestionnairesApi = (req, res) => {
+	Questionnaire.findOne({ _id: req.params.id })
+		.then(questionnaire => {
+			res.json(questionnaire);
+		})
+};
+// ####Delete Questionnaires Api####
+exports.getDeleteQuestionnairesApi = (req, res) => {
+	Questionnaire.findOne({ _id: req.params.id })
+    .remove((err, data) => {
+			res.redirect('/api/questionnaire')
+		});
+};

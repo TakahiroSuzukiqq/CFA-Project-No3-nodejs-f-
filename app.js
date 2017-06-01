@@ -9,11 +9,19 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var questionnaire = require('./routes/questionnaire');
+// var questionnaire = require('./routes/questionnaire');
+// var Api = require('./routes/Api')
 
 var mongoose = require('mongoose');
 
 var app = express();
+
+//jsonwebtoken
+const authApi = require('./middleware/authApi');
+
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ email: process.env.EMAIL }, 'secretcode');
+console.log(token);
 
 // database is called cfa-pj3-icn
 mongoose.connect(process.env.MONGODB_URI);
@@ -36,9 +44,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//#json web token ##
+app.use('/api/*', authApi);
 app.use('/', index);
 app.use('/users', users);
-app.use('/questionnaire', questionnaire);
+// app.use('/questionnaire', questionnaire);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
