@@ -10,10 +10,16 @@
       <h2>Create Questions!!</h2>
 
       <form action="/questionnaire" method="post">
-        	<!-- req.body.ingredient_name -->
-    	    <input type="text" name="questionnaire_name">
-    	    <input type="submit">
-        </form>
+        <select name='dropdown_action' >
+          <option value="string">String-文章-</option>
+          <option value="checkbox">Checkbox-満足度-</options>
+        </select>
+        <input type="text" name="questionnaire_name">
+        <!-- <input type="number" name="questionnaire_number"> -->
+        <input type="submit">
+       </form>
+
+
 
 <br>
         <ul>

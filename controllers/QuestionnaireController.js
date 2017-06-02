@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const Questionnaire = require('../models/Questionnaire');
 
 
+
+
 // ####Get Questionnarie####
 exports.getQuestionnaires = (req, res) => {
 	Questionnaire.find()
@@ -17,8 +19,11 @@ exports.getQuestionnaires = (req, res) => {
 exports.getNewQuestionnaires = (req, res) => {
 	// console.log('TESTreq.body is:', req.body);
 	const name = req.body.questionnaire_name;
+	const question_type = req.body.question_type;
+	const dropdown_action = req.body.dropdown_action;
 	let questionnaire = new Questionnaire();
 	questionnaire.name = name;
+	questionnaire.question_type = dropdown_action;
 	questionnaire.save()
 		.then(() => {
 			res.redirect('/questionnaire')
@@ -64,9 +69,11 @@ exports.getQuestionnairesApi = (req, res) => {
 };
 // ####Get New Questionnaires Api####
 exports.getNewQuestionnairesApi = (req, res) => {
-	const name = req.query.name;
+	const name = req.body.name;
+	const question_type = req.body.question_type;
 	let questionnaire = new Questionnaire();
 	questionnaire.name = name;
+	questionnaire.question_type = question_type;
 	questionnaire.save()
 		.then(() => {
 			res.redirect('/api/questionnaire')
