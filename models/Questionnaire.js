@@ -6,8 +6,11 @@ const QuestionnaireSchema = new Schema({
 		trim: true
 	},
 	question_type: {
-		type: String,
+		type: String
 		// default: "string"
+	},
+	qa_key: {
+		type: String
 	},
 	created_at: {
 		type: Date,

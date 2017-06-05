@@ -21,9 +21,11 @@ exports.getNewQuestionnaires = (req, res) => {
 	const name = req.body.questionnaire_name;
 	const question_type = req.body.question_type;
 	const dropdown_action = req.body.dropdown_action;
+	const qa_key = req.body.qa_key_name;
 	let questionnaire = new Questionnaire();
 	questionnaire.name = name;
 	questionnaire.question_type = dropdown_action;
+	questionnaire.qa_key = qa_key;
 	questionnaire.save()
 		.then(() => {
 			res.redirect('/questionnaire')
@@ -71,9 +73,11 @@ exports.getQuestionnairesApi = (req, res) => {
 exports.getNewQuestionnairesApi = (req, res) => {
 	const name = req.body.name;
 	const question_type = req.body.question_type;
+	const qa_key = req.body.qa_key_name;
 	let questionnaire = new Questionnaire();
 	questionnaire.name = name;
 	questionnaire.question_type = question_type;
+	questionnaire.qa_key = qa_key;
 	questionnaire.save()
 		.then(() => {
 			res.redirect('/api/questionnaire')

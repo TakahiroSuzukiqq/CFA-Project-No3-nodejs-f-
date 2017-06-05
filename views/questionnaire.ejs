@@ -7,21 +7,32 @@
     <% include partials/header.ejs %>
       <h1><%= title %></h1>
       <br>
-      <h2>Create Questions!!</h2>
+      <h2>Create Questions-質問作成-</h2>
 
       <form action="/questionnaire" method="post">
         <select name='dropdown_action' >
-          <option value="string">String-文章-</option>
-          <option value="checkbox">Checkbox-満足度-</options>
+          <option>Select your question type-質問のタイプを選んで下さい-</option>
+          <option value="defoinfo">Basic infomation-ユーザー情報回答-</option>
+          <option value="checkbox">Checkbox-満足度回答-</options>
+          <option value="string">String-文章回答-</option>
+          <option value="yesno">YesNo-はい、いいえ回答-</option>
         </select>
-        <input type="text" name="questionnaire_name">
+         <br />
+         <br />
+        <!-- <input type="text" id="email"  " /> -->
+        <input type="text" class="form-control" name="qa_key_name" placeholder="With no space-質問番号を入力して下さい-">
+         <br />
+        <!-- <input> -->
+        <textarea class="form-control" rows="3" type="text" name="questionnaire_name" placeholder="Question field-質問を入力して下さい-"></textarea>
+         <br />
         <!-- <input type="number" name="questionnaire_number"> -->
         <input type="submit">
        </form>
+         <br />
+         <br />
 
+        <h2>Questions list-質問リスト-</h2>
 
-
-<br>
         <ul>
     	    <% questionnaires.forEach(questionnaire => { %>
     		    <li>
