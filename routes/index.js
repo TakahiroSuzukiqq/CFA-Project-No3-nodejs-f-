@@ -2,13 +2,21 @@ var express = require('express');
 var router = express.Router();
 
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Dashboard for ICN' });
 });
 
+//dashboard index page
+// const Answer = require('../models/Answer');
+// const AnswerController = require('../controllers/AnswerController');
+//
+// router.get('/', AnswerController.getAnswers);
+
 // module.exports = router;
 
+//dashboard questionnaire page
 const Questionnaire = require('../models/Questionnaire');
 const QuestionnaireController = require('../controllers/QuestionnaireController');
 

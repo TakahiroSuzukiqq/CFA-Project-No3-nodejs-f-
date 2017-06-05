@@ -5,7 +5,7 @@
   </head>
   <body>
     <% include partials/header.ejs %>
-      <h1><%= title %></h1>
+      <!-- <h1><%= title %></h1> -->
       <br>
       <h2>Create Questions-質問作成-</h2>
 
@@ -37,9 +37,11 @@
     	    <% questionnaires.forEach(questionnaire => { %>
     		    <li>
               <%= questionnaire.name %>
-              <a href="/questionnaire/<%= questionnaire._id %>/edit">Edit</a>
-          　　<a href="/questionnaire/<%= questionnaire._id %>/delete">Delete</a>
+              <br />
+              <a href="/questionnaire/<%= questionnaire._id %>/edit">Edit-編集-</a>
+          　　<a href="/questionnaire/<%= questionnaire._id %>/delete">Delete-削除-</a>
             </li>
+            <br />
     	    <% }) %>
         </ul>
   </body>

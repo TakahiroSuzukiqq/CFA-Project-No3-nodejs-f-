@@ -1,18 +1,20 @@
 // const mongoose = require('mongoose');
 // const { Schema } = mongoose;
 // const AnswerSchema = new Schema({
-// 	name: {
+//   name: {
 // 		type: String,
 // 		trim: true
 // 	},
-//   created_at: {
+// 	question_type: {
+// 		type: String
+// 		// default: "string"
+// 	},
+// 	qa_key: {
+// 		type: String
+// 	},
+// 	created_at: {
 // 		type: Date,
 // 		default: Date.now
-// 	},
-// 	checkbox: Boolean,
-// 	age : {
-// 		type: Number,
-// 		min: 18, max: 65
 // 	}
 // });
 //
