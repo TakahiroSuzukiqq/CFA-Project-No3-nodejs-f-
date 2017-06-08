@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const QuestionnaireSchema = new Schema({
+const QuestionnaireSchema = new Schema ({
 	name: {
 		type: String,
 		trim: true
@@ -15,7 +15,7 @@ const QuestionnaireSchema = new Schema({
 	created_at: {
 		type: Date,
 		default: Date.now
-	}
+	},
 });
 
 const Questionnaire = mongoose.model('Questionnaire', QuestionnaireSchema);

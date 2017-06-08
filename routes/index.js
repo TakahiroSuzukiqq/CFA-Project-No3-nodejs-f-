@@ -2,21 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 
-
-/* GET home page. */
+/* #GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Dashboard for ICN' });
 });
-
-//dashboard index page
-// const Answer = require('../models/Answer');
-// const AnswerController = require('../controllers/AnswerController');
 //
-// router.get('/', AnswerController.getAnswers);
 
-// module.exports = router;
-
-//dashboard questionnaire page
+//* #dashboard questionnaire page */
 const Questionnaire = require('../models/Questionnaire');
 const QuestionnaireController = require('../controllers/QuestionnaireController');
 
@@ -31,6 +23,37 @@ router.post('/api/questionnaire', QuestionnaireController.getNewQuestionnairesAp
 router.get('/api/questionnaire/:id', QuestionnaireController.getEditQuestionnairesApi);
 router.delete('/api/questionnaire/:id', QuestionnaireController.getDeleteQuestionnairesApi);
 
+
+/*/#user answer form react */
+const QuestionAndAnswer = require('../models/QuestionAndAnswer');
+const QuestionAndAnswerController = require('../controllers/QuestionAndAnswerController');
+const axios = require('axios');
+
+// router.post('/reactApi', QuestionAndAnswer.postReactApi);
+router.get('/answers', QuestionAndAnswerController.getAnswers);
+router.post('/api/answers', QuestionAndAnswerController.postAnswersApi);
+
+
+//* #twitter
+// router.post('/get_users', TweetController.postTweet);
+
+//
+// var Trello = require("node-trello");
+// var t = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
+//
+// t.get("/1/members/me", function(err, data) {
+//   if (err) throw err;
+//   console.log(data);
+// });
+//
+// // URL arguments are passed in as an object.
+// t.get("/1/members/me", { cards: "open" }, function(err, data) {
+//   if (err) throw err;
+//   console.log(data);
+// });
+//
+//
+// */
 
 
 module.exports = router;

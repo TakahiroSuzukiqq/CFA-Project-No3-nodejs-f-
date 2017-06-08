@@ -1,0 +1,12 @@
+
+<%= answers.length %> Answer Forms Completed
+  <br/>
+   <ul>
+     <% answers.forEach(answer => { %>
+       <li>
+
+         <%= answer._id %>
+         <%= answer.answers%>
+       </li>
+     <% }) %>
+   </ul>

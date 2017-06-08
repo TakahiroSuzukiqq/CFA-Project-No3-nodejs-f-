@@ -1,4 +1,5 @@
 require('dotenv').config();
+var Trello = require("node-trello");
 
 var express = require('express');
 var path = require('path');
@@ -11,6 +12,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 // var questionnaire = require('./routes/questionnaire');
 // var Api = require('./routes/Api')
+//var userList = require('./user-list');  //////twitter
 
 var mongoose = require('mongoose');
 
@@ -29,7 +31,7 @@ const { connection: db } = mongoose;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-	console.log('connected to questionnaire database')
+	console.log('connected to questionnaire database') //db for test
 });
 
 // view engine setup
