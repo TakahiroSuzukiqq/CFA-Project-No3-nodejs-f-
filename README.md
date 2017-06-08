@@ -87,7 +87,7 @@
 
 # ERD  
  <img src="https://image.ibb.co/mBe4TF/erd_pic.jpg" alt="erd pic" border="0" />  
- <img src="https://image.ibb.co/cTLKTF/cfa_pj3_erd.png" alt="cfa pj3 erd" border="0" />  
+ <img src="https://image.ibb.co/ibJ0kv/Screen_Shot_2017_06_09_at_09_16_24.png" alt="Screen_Shot_2017_06_09_at_09_16_24" border="0">  
 
 
 # Future plan  
