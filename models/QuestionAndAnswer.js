@@ -5,7 +5,7 @@ const QuestionAndAnswerSchema = new Schema ({
 			qa_key: String,
 			name: String,
 			userAnswer: String,
-			answers: Array
+			answerS: Array
 }]
 }
 );

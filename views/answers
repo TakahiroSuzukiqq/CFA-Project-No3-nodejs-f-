@@ -1,0 +1,15 @@
+<!-- <% include partials/header.ejs %>
+
+<%= answers.length %> Answer Forms Completed
+  <br/>
+   <ul>
+     <% answers.forEach(answer => { %>
+       <li>
+
+         <%= answer._id %>
+         <br />
+         <%= answer.answers %>
+
+       </li>
+     <% }) %>
+   </ul> -->

@@ -1,12 +1,18 @@
+<% include partials/header.ejs %>
 
 <%= answers.length %> Answer Forms Completed
   <br/>
-   <ul>
+  <br/>
      <% answers.forEach(answer => { %>
-       <li>
+       <p>ID : <%= answer._id %></p>
+       <%= answer.answers %>
+       <br />
+       <%= answer.answers.name %>
 
-         <%= answer._id %>
-         <%= answer.answers%>
-       </li>
+       <br />
+       <br />
      <% }) %>
+
+
+
    </ul>
