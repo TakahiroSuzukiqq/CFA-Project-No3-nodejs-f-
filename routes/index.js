@@ -38,8 +38,6 @@ router.post('/api/answers', QuestionAndAnswerController.postAnswersApi);
 // router.post('/get_users', TweetController.postTweet);
 
 //
-// var Trello = require("node-trello");
-// var t = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
 //
 // t.get("/1/members/me", function(err, data) {
 //   if (err) throw err;

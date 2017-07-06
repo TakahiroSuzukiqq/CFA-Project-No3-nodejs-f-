@@ -1,5 +1,4 @@
 require('dotenv').config();
-var Trello = require("node-trello");
 
 var express = require('express');
 var path = require('path');
