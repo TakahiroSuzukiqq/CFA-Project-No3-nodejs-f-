@@ -4,9 +4,10 @@
  * [Installation](#section3)    
  * [Challenges](#section4)  
  * [Trello](#section5)    
- * [Original Image for the dashboard ] (#section6)    
- * [ERD](#section7)    
- * [Future plan](#section8)    
+ * [Original Image for the dashboard](#section6)    
+ * [The database structure](#section7)    
+ * [ERD](#section8)      
+ * [Future plan](#section9)    
  * [React side](https://github.com/TakahiroSuzukiqq/cfa-project-no3-react-f-)    
      
 # <a name="section1"> CFA-Project-No3  
@@ -85,26 +86,34 @@
  <img src="https://image.ibb.co/jbAm8F/Screen_Shot_2017_06_07_at_23_04_42.png" alt="Screen Shot 2017 06 07 at 23 04 42" border="0" />  
 
 
-# <a name="section5"> Original Image for the dashboard  
+# <a name="section6"> Original Image for the dashboard  
  <img src="https://image.ibb.co/nfyL2a/original_image.jpg" alt="original image" border="0" />  
  <img src="https://image.ibb.co/b6THFv/moqup_layout.png" alt="moqup layout" border="0" />  
  <img src="https://image.ibb.co/e6LHha/react_questionnaire.jpg" alt="react questionnaire" border="0" />  
 
 
-# <a name="section6"> The database structure  
+# <a name="section7"> The database structure  
  <img src="https://image.ibb.co/eVFToF/database_structure.jpg" alt="database structure" border="0" />  
  <img src="https://image.ibb.co/iXh2Fv/database_structure2.jpg" alt="database structure2" border="0" />  
 
 
-# <a name="section7"> ERD  
+# <a name="section8"> ERD  
  <img src="https://image.ibb.co/mBe4TF/erd_pic.jpg" alt="erd pic" border="0" />  
  <img src="https://image.ibb.co/ibJ0kv/Screen_Shot_2017_06_09_at_09_16_24.png" alt="Screen_Shot_2017_06_09_at_09_16_24" border="0">  
 
 
-# <a name="section8"> Future plan  
+# <a name="section9"> Future plan  
  *Create the question field and unique key edit & delete page in Node.js side.  
  *Create the display limitation according to each questions so that the admin user can choose which question and answer to display.  
  *User authentication in React side.  
  *Implement Trello API and link it with Slack API.  
  *Implement google analytics API.  
- *Implement google calendar API.
+ *Implement google calendar API.  
+   
+  
+# <a name="section9"> React side  
+  As for the react side code, please visit [React side](https://github.com/TakahiroSuzukiqq/cfa-project-no3-react-f-).  
+
+      
+        
+ 
