@@ -1,4 +1,15 @@
-# CFA-Project-No3  
+# Overview    
+ * [CFA-Project-No3](#section1)    
+ * [Function](#section2)    
+ * [Installation](#section3)    
+ * [Challenges](#section4)  
+ * [Trello](#section5)    
+ * [Original Image for the dashboard ] (#section6)    
+ * [ERD](#section7)    
+ * [Future plan](#section8)    
+ * [React side](https://github.com/TakahiroSuzukiqq/cfa-project-no3-react-f-)    
+     
+# <a name="section1"> CFA-Project-No3  
  *Overall  
   This is a questionnaire application for my client, visa agency.  
   My visa agency has a problem that that they would like to reconsider their degital marketing.
@@ -12,7 +23,7 @@
   <img src="https://image.ibb.co/nyapTF/Screen_Shot_2017_06_08_at_10_10_58.png" alt="Screen_Shot_2017_06_08_at_10_10_58" border="0">  
 
 
-# Function  
+# <a name="section2"> Function  
    *As an admin, the user(my visa agency) can create questions, once created they are reflected to React side.  
    *In react side, users(students, working holiday people) can answer each question and submit a questionnaire form.  
    *Once a questionnaire form is submitted, the data goes back to Node.js sisde again and display each result.  
@@ -20,7 +31,7 @@
    *Each question has its question type and according to this question type, answer field is determined.  
    *Each quesiton and answer field are connected with the unique key.  
 
-# Installation  
+# <a name="section2"> Installation  
 *Basic Installation  
  $express app name --view=ejs  
  $npm install  
@@ -54,7 +65,7 @@
  $yarn add supertest --dev  
 
 
-# Challenges  
+# <a name="section4"> Challenges  
  *Routes issue in Node.js side  
   At first my Node app had two routes as "home routes", one was index.js, another was questionnaire.js but in that structure it was confusing to setup api authentication in questionnaire page so integrated in index.js.  
 
@@ -70,27 +81,27 @@
  *Call a list of questions & answers from React to Node.js side.  
 
 
-#  Trello  
+#  <a name="section5"> Trello  
  <img src="https://image.ibb.co/jbAm8F/Screen_Shot_2017_06_07_at_23_04_42.png" alt="Screen Shot 2017 06 07 at 23 04 42" border="0" />  
 
 
-# Original Image for the dashboard  
+# <a name="section5"> Original Image for the dashboard  
  <img src="https://image.ibb.co/nfyL2a/original_image.jpg" alt="original image" border="0" />  
  <img src="https://image.ibb.co/b6THFv/moqup_layout.png" alt="moqup layout" border="0" />  
  <img src="https://image.ibb.co/e6LHha/react_questionnaire.jpg" alt="react questionnaire" border="0" />  
 
 
-# The database structure  
+# <a name="section6"> The database structure  
  <img src="https://image.ibb.co/eVFToF/database_structure.jpg" alt="database structure" border="0" />  
  <img src="https://image.ibb.co/iXh2Fv/database_structure2.jpg" alt="database structure2" border="0" />  
 
 
-# ERD  
+# <a name="section7"> ERD  
  <img src="https://image.ibb.co/mBe4TF/erd_pic.jpg" alt="erd pic" border="0" />  
  <img src="https://image.ibb.co/ibJ0kv/Screen_Shot_2017_06_09_at_09_16_24.png" alt="Screen_Shot_2017_06_09_at_09_16_24" border="0">  
 
 
-# Future plan  
+# <a name="section8"> Future plan  
  *Create the question field and unique key edit & delete page in Node.js side.  
  *Create the display limitation according to each questions so that the admin user can choose which question and answer to display.  
  *User authentication in React side.  
